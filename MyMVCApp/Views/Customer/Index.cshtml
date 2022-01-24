@@ -1,0 +1,32 @@
+﻿@*model IEnumerable<MyMVCApp.Models.Customer>*@
+@model IEnumerable<MyMVCApp.Models.Location>
+@{
+}
+
+
+@*<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Gender</th>
+    </tr>
+    @foreach (var cust in Model)
+    {
+        <tr>
+            <td>@cust.Id</td>
+            <td>@cust.Name</td>
+            <td>@cust.Email</td>
+            <td>@cust.Mobile</td>
+            <td>@cust.Gender</td>
+        </tr>
+    }
+</table>*@
+<h2>Customer Locations</h2>
+<ol>
+    @foreach(var location in Model)
+            {
+    <li><a asp-action="CustomerList" asp-controller="Customer" asp-route-id="@location.Id"> @location.Name</a></li>
+            }
+</ol>

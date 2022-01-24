@@ -1,0 +1,33 @@
+﻿@model MyMVCApp.Models.Customer
+
+<div class="row">
+    <div class="col-6 offset-3">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Customer Detail</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <td><label>Customer Name:</label></td>
+                        <td>@Model.Name</td>
+                    </tr>
+                    <tr>
+                        <td><label>Customer Email:</label></td>
+                        <td>@Model.Email</td>
+                    </tr>
+                    <tr>
+                        <td><label>Customer Gender:</label></td>
+                        <td>@Model.Gender</td>
+                    </tr>
+                    <tr>
+                        <td><label>Customer Mobile:</label></td>
+                        <td>@Model.Mobile</td>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+</div>
+

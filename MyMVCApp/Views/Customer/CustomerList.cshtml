@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MyMVCApp.Models.Customer>
+
+<div class="row">
+    <div class="col-6">
+    @if (Model.Count() == 0)
+    {
+          <h3>Customer Not Found at this Location !</h3>
+    }
+    else
+    {
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var cust in Model)
+        {
+            <tr>
+                <td>@cust.Name</td>
+                <td><a asp-action="CustomerDetail" asp-controller="Customer" asp-route-id="@cust.Id">View Details</a></td>
+            </tr>
+        }
+    </table>
+    }
+</div>
+</div>
